@@ -23,14 +23,17 @@ def get_parser():
 
     parser = ArgumentParser(prog='cdg',
 		description='Command Line Documentation Generator')
-    parser.add_argument('-e', '--executable', type=str, required=True,
+    parser.add_argument('prog', type=str,
                         help='The executable that implements the cli.')
-    parser.add_argument('--parser', type=str,
-                        help='If used with python exectuable, the function in the executable that returns the parsing object or, if directly exposed, the variable name that holds the parsing object')
+    parser.add_argument('parser', type=str,
+                        help='The function in the executable that returns the ArgumentParser object or, if directly exposed, the variable name that holds the ArgumentParser object')
 
     return parser
 
-if __name__ == '__main__':
+def main():
     parser = get_parser()
     args = parser.parse_args()
-    generate_docs(args)
+    generate_docs(args.prog, args.parser)
+
+if __name__ == '__main__':
+    main()

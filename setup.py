@@ -16,6 +16,6 @@ setup(name='cdg',
       packages=find_packages(),
       install_requires=[],
       entry_points={
-          'console_scripts': ['cdg = cdg.__main__:main']
+          'console_scripts': ['cdg = cdg.main:main']
       }
 )
