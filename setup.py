@@ -18,4 +18,4 @@ setup(name='cdg',
       entry_points={
           'console_scripts': ['cdg = cdg.__main__:main']
       }
-     )
+)
