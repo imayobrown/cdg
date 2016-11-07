@@ -25,7 +25,7 @@ def get_parser():
 		description='Command Line Documentation Generator')
     parser.add_argument('-e', '--executable', type=str, required=True,
                         help='The executable that implements the cli.')
-    parser.add_argument('--function_or_object', type=str,
+    parser.add_argument('--parser', type=str,
                         help='If used with python exectuable, the function in the executable that returns the parsing object or, if directly exposed, the variable name that holds the parsing object')
 
     return parser
