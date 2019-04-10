@@ -14,6 +14,10 @@ subparsers = parser_with_subcommands.add_subparsers(help='sub-command help')
 parser_a = subparsers.add_parser('a', help='a help')
 parser_a.add_argument('--x', help='x argument help')
 
+subparsers_a = parser_a.add_subparsers(help='sub-command help')
+parser_aa = subparsers_a.add_parser('aa', help='aa help')
+parser_aa.add_argument('z', help='z argument help')
+
 parser_b = subparsers.add_parser('b', help='b help')
 parser_b.add_argument('y', help='y argument help')
 
